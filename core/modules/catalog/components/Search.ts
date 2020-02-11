@@ -48,6 +48,7 @@ export const Search = {
         let startValue = 0;
         this.start = startValue
         this.readMore = true
+        console.log("query-->",query);
         this.$store.dispatch('product/list', { query, start: this.start, configuration: {}, size: this.size, updateState: false }).then(resp => {
           this.products = resp.items
           this.start = startValue + this.size
